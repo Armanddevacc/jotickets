@@ -18,12 +18,12 @@ Ce projet consiste en la création d'une API REST avec Flask pour gérer les tic
 ## Installation
 
 1. **Cloner le dépôt** :
-   ```bash
-   git clone https://github.com/tonnomutilisateur/tonprojet.git
+```bash
+git clone https://github.com/tonnomutilisateur/tonprojet.git
 ```
 2. **Naviguer dans le répertoire du projet** :
-   ```bash
-   cd tonprojet
+```bash
+cd tonprojet
 ```
 3. **Installer les dépendances** :
 ```bash
