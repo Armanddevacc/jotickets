@@ -21,45 +21,50 @@ Ce projet consiste en la création d'une API REST avec Flask pour gérer les tic
    ```bash
    git clone https://github.com/tonnomutilisateur/tonprojet.git
 ```
-2.Naviguer dans le répertoire du projet :
+2. **Naviguer dans le répertoire du projet** :
+   ```bash
+   cd tonprojet
+```
+3. **Installer les dépendances** :
 ```bash
-cd tonprojet```
-3.Installer les dépendances :
+pip install -r requirements.txt
+```
+4. **Lancer l'application** :
 ```bash
-pip install -r requirements.txt```
-4.Lancer l'application :
-```bash
-python app.py```
+python app.py
+```
 
-##Utilisation
+## Utilisation
 
 Routes principales de l'API
-- **Spectateurs
+- **Spectateurs**
 GET /spectators : Récupère la liste de tous les spectateurs.
 POST /spectators : Ajoute un nouveau spectateur dans la base de données.
 PATCH /spectators/{username}/password : Met à jour le mot de passe d'un spectateur.
-- **Tickets
+- **Tickets**
 POST /tickets : Ajoute un nouveau ticket.
 GET /tickets/{spectator_id} : Récupère tous les tickets d'un spectateur.
-- **Événements
+- **Événements**
 POST /events : Ajoute un nouvel événement.
 GET /events : Récupère la liste de tous les événements.
 PATCH /events/{event_id} : Met à jour les informations d'un événement.
-- **Sécurité de l'API
+- **Sécurité de l'API**
 Hashage des mots de passe : Les mots de passe sont hashés avant d'être stockés en base de données.
 Authentification par token : Un token est généré à la connexion d'un utilisateur via /login et doit être inclus dans les requêtes pour accéder aux routes protégées.
-##Fonctionnalités Avancées
 
-###1.Initialisation de la base de données :
+## Fonctionnalités Avancées
+
+### 1.Initialisation de la base de données :
 Fonction create_database() dans ./db/init.py pour créer la structure des tables.
 Fonction populate_database() pour charger les données depuis un fichier CSV.
-###3.Traitement des données :
+### 3.Traitement des données :
 Transformation des données pour ajouter la ville par défaut (Paris) quand elle n’est pas mentionnée dans la colonne de localisation.
-###4.Configuration et Sécurité :
+### 4.Configuration et Sécurité :
 Stockage des mots de passe sous forme de hash grâce à bcrypt.
 Utilisation de tokens JWT pour sécuriser les accès aux routes sensibles.
 Exemple de requête avec token
 
 ```http
 GET localhost:5000/spectators HTTP/1.1
-Authorization: Bearer <token> ```
+Authorization: Bearer <token> 
+```
