@@ -1,0 +1,14 @@
+bcrypt==4.2.0
+blinker==1.8.2
+certifi==2024.8.30
+charset-normalizer==3.4.0
+click===None
+flask===None
+idna==3.10
+itsdangerous===None
+Jinja2==3.1.4
+MarkupSafe==3.0.2
+requests==2.32.3
+urllib3==2.2.3
+utils==1.0.2
+werkzeug===None
